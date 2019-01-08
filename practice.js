@@ -121,7 +121,12 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+const divider = (numbersArray) => {
+  let evens = numbersArray.filter(nums => nums % 2 === 0)
+  let odds = numbersArray.filter(nums => nums % 2 !== 0)
+  let final = [evens, odds]
+  return final
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -142,7 +147,9 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+const finder = arr => {
+  return arr.includes(getRandomArbitrary()) ? true : false
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -171,8 +178,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+const removeItem = (list, item) => {
+  if(!list || !item) return []
+  if(list.includes(item)) {
+    list.splice(list.indexOf(item), 1)
+  } else {
+    return list
+  }
 
+  return list
+}
 
+const addItem = (list, item) => {
+  if(!list || !item){
+    return []
+  } else {
+    list.push(item)
+  }
+  return list
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -181,7 +205,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+const maker = () => {
+  let arr = []
+  for(let i = 1; i < 216; i++) {
+    arr.push(i)
+  }
+  return arr
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -197,6 +227,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+const addTen = numbers => numbers.map(Number).map(num => num += 10)
 
 
 
@@ -222,7 +253,7 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+const longer = (x, y) => x.length > y.length ? x : y
 
 
 /*
@@ -234,8 +265,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
-
+const both = (x, y) => {
+  let newArr = []
+  for(let i = 0; i < x.length; i++) {
+    for(let j = 0; j < y.length; j++) {
+      if(x[i] === y[j]) {
+        newArr.push(x[i])
+      }
+    }
+  }
+  return newArr
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -274,6 +314,8 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt)
+console.log(devMountainEmployees.length)
 
 
 
@@ -283,7 +325,7 @@ var colt = {
 */
 
 //Code Here
-
+console.log(devMountainEmployees.splice(devMountainEmployees.indexOf(cahlan), 1))
 
 
 ////////// PROBLEM 13 //////////
@@ -295,6 +337,7 @@ var colt = {
 */
 
 //Code Here
+let users = []
 
 
 
@@ -314,7 +357,18 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
-
+users.push({
+  name: 'Hank',
+  email: 'hank@strickland.com',
+  password: 'm3atn0the4t',
+  username: 'propain'
+},
+{
+  name: 'Gus',
+  email: 'gus@gus.com',
+  password: 'gusmansourwew',
+  username: 'gravoldo'
+})
 
 
 /*
@@ -328,7 +382,7 @@ var user1 = {
 */
 
 //Code Here
-
+users.splice(users.indexOf(tyler), 1)
 
 
 /*
