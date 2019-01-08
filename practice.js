@@ -18,6 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
+const first = arr => {
+  return arr[0]
+}
 
 
 
@@ -33,6 +36,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
+const last = arr => {
+  return arr[arr.length - 1]
+}
 
 
 
@@ -48,7 +54,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+const looper = family => {
+  for(let i = 0; i < family.length; i++) {
+    alert(family[i])
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,6 +73,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+const reversedLooper = letters => {
+  for(let i = letters.length; i--;) {
+    alert(letters[i])
+  }
+}
 
 
 
@@ -78,7 +93,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+const evenFinder = nums => nums.filter(num => num % 2 === 0)
 
 
 
